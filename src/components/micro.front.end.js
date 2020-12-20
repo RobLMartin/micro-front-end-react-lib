@@ -23,7 +23,7 @@ function MicroFrontend({ name, host }) {
         script.crossOrigin = "";
         // script.src = `${host}${manifest.files["main.js"]}`;
         const index = host.lastIndexOf("/");
-        const newHost = host.subString(0, index);
+        const newHost = host.substring(0, index);
         script.src = `${newHost}${manifest.files["main.js"]}`;
         script.onload = () => {
           renderMicroFrontend();
