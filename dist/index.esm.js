@@ -20,8 +20,11 @@ function MicroFrontend(_ref) {
     }).then(function (manifest) {
       var script = document.createElement("script");
       script.id = scriptId;
-      script.crossOrigin = "";
-      script.src = "".concat(host).concat(manifest.files["main.js"]);
+      script.crossOrigin = ""; // script.src = `${host}${manifest.files["main.js"]}`;
+
+      var index = host.lastIndexOf("/");
+      var newHost = host.subString(0, index);
+      script.src = "".concat(newHost).concat(manifest.files["main.js"]);
 
       script.onload = function () {
         renderMicroFrontend();

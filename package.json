@@ -1,6 +1,6 @@
 {
   "name": "micro-front-end-react-lib",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "source": "src/index.js",
